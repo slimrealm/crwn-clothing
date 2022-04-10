@@ -1,4 +1,4 @@
-import { initializeApp } from "firebase/app";
+import { initializeApp } from 'firebase/app';
 import {
   getAuth,
   signInWithRedirect,
@@ -8,7 +8,7 @@ import {
   signInWithEmailAndPassword,
   signOut,
   onAuthStateChanged,
-} from "firebase/auth";
+} from 'firebase/auth';
 import {
   getFirestore,
   doc,
@@ -18,22 +18,22 @@ import {
   writeBatch,
   query,
   getDocs,
-} from "firebase/firestore";
+} from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBbi--9g1c92oXO5mKu-XWIrUq8tG58aDc",
-  authDomain: "crwn-clothing-db-7985b.firebaseapp.com",
-  projectId: "crwn-clothing-db-7985b",
-  storageBucket: "crwn-clothing-db-7985b.appspot.com",
-  messagingSenderId: "162594292410",
-  appId: "1:162594292410:web:836a31f6073f019062f883",
+  apiKey: 'AIzaSyBbi--9g1c92oXO5mKu-XWIrUq8tG58aDc',
+  authDomain: 'crwn-clothing-db-7985b.firebaseapp.com',
+  projectId: 'crwn-clothing-db-7985b',
+  storageBucket: 'crwn-clothing-db-7985b.appspot.com',
+  messagingSenderId: '162594292410',
+  appId: '1:162594292410:web:836a31f6073f019062f883',
 };
 
 initializeApp(firebaseConfig);
 
 const googleProvider = new GoogleAuthProvider();
 googleProvider.setCustomParameters({
-  prompt: "select_account",
+  prompt: 'select_account',
 });
 
 export const auth = getAuth();
@@ -61,11 +61,11 @@ export const addCollectionAndDocuments = async (
   });
 
   await batch.commit();
-  console.log("done");
+  console.log('done');
 };
 
 export const getCategoriesAndDocuments = async () => {
-  const collectionRef = collection(db, "categories");
+  const collectionRef = collection(db, 'categories');
   const q = query(collectionRef);
 
   const querySnapshot = await getDocs(q);
@@ -84,7 +84,7 @@ export const createUserDocumentFromAuth = async (
 ) => {
   if (!userAuth) return;
 
-  const userDocRef = doc(db, "users", userAuth.uid);
+  const userDocRef = doc(db, 'users', userAuth.uid);
 
   const userSnapshot = await getDoc(userDocRef);
 
@@ -100,7 +100,7 @@ export const createUserDocumentFromAuth = async (
         ...additionalInformation,
       });
     } catch (error) {
-      console.log("error creating the user", error.message);
+      console.log('error creating the user', error.message);
     }
   }
 
