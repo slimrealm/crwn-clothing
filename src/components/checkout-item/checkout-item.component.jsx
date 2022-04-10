@@ -5,10 +5,8 @@ import { CartContext } from '../../contexts/cart.context';
 import {
   CheckoutItemContainer,
   ImageContainer,
-  ImgStyled,
-  Name,
+  BaseSpan,
   Quantity,
-  Price,
   Arrow,
   Value,
   RemoveButton,
@@ -27,15 +25,15 @@ const CheckoutItem = ({ cartItem }) => {
   return (
     <CheckoutItemContainer>
       <ImageContainer>
-        <ImgStyled src={imageUrl} alt={`${name}`} />
+        <img src={imageUrl} alt={`${name}`} />
       </ImageContainer>
-      <Name> {name} </Name>
+      <BaseSpan> {name} </BaseSpan>
       <Quantity>
         <Arrow onClick={removeItemHandler}>&#10094;</Arrow>
         <Value>{quantity}</Value>
         <Arrow onClick={addItemHandler}>&#10095;</Arrow>
       </Quantity>
-      <Price> {price}</Price>
+      <BaseSpan> {price}</BaseSpan>
       <RemoveButton onClick={clearItemHandler}>&#10005;</RemoveButton>
     </CheckoutItemContainer>
   );

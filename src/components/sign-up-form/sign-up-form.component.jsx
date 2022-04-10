@@ -8,8 +8,7 @@ import {
   createUserDocumentFromAuth,
 } from '../../utils/firebase/firebase.utils';
 
-import './sign-up-form.styles.jsx';
-import { SignUpContainer, H2Styled } from './sign-up-form.styles';
+import { SignUpContainer } from './sign-up-form.styles';
 
 const defaultFormFields = {
   displayName: '',
@@ -28,8 +27,9 @@ const SignUpForm = () => {
 
   const handleSubmit = async event => {
     event.preventDefault();
-    if (confirmPassword !== password) {
-      alert('Passwords do not match.');
+
+    if (password !== confirmPassword) {
+      alert('passwords do not match');
       return;
     }
 
@@ -45,15 +45,9 @@ const SignUpForm = () => {
       if (error.code === 'auth/email-already-in-use') {
         alert('Cannot create user, email already in use');
       } else {
-        console.log(`user creation encountered an error: ${error}`);
+        console.log('user creation encountered an error', error);
       }
     }
-
-    //const { user } = await signInWithEmailPassword(email, password);
-    //const userDocRef = await createUserDocumentFromAuth(user);
-
-    //console log whether user authenticated or not -- should see object with properties like displayName and uid
-    //console.log(userDocRef);
   };
 
   const handleChange = event => {
@@ -64,7 +58,7 @@ const SignUpForm = () => {
 
   return (
     <SignUpContainer>
-      <H2Styled>I do not have an account</H2Styled>
+      <h2>Don&apos;t have an account?</h2>
       <span>Sign up with your email and password</span>
       <form onSubmit={handleSubmit}>
         <FormInput
@@ -75,6 +69,7 @@ const SignUpForm = () => {
           name="displayName"
           value={displayName}
         />
+
         <FormInput
           label="Email"
           type="email"
@@ -83,6 +78,7 @@ const SignUpForm = () => {
           name="email"
           value={email}
         />
+
         <FormInput
           label="Password"
           type="password"
@@ -91,6 +87,7 @@ const SignUpForm = () => {
           name="password"
           value={password}
         />
+
         <FormInput
           label="Confirm Password"
           type="password"

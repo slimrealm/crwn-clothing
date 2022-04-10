@@ -32,6 +32,7 @@ const firebaseConfig = {
 initializeApp(firebaseConfig);
 
 const googleProvider = new GoogleAuthProvider();
+
 googleProvider.setCustomParameters({
   prompt: 'select_account',
 });
@@ -41,13 +42,9 @@ export const signInWithGooglePopup = () =>
   signInWithPopup(auth, googleProvider);
 export const signInWithGoogleRedirect = () =>
   signInWithRedirect(auth, googleProvider);
-export const signInWithEmailPassword = (email, password) => {
-  signInWithEmailAndPassword(email, password);
-};
 
 export const db = getFirestore();
 
-// batch write from local JS / JSON object to database
 export const addCollectionAndDocuments = async (
   collectionKey,
   objectsToAdd
@@ -109,16 +106,17 @@ export const createUserDocumentFromAuth = async (
 
 export const createAuthUserWithEmailAndPassword = async (email, password) => {
   if (!email || !password) return;
+
   return await createUserWithEmailAndPassword(auth, email, password);
 };
 
 export const signInAuthUserWithEmailAndPassword = async (email, password) => {
   if (!email || !password) return;
+
   return await signInWithEmailAndPassword(auth, email, password);
 };
 
 export const signOutUser = async () => await signOut(auth);
 
-export const onAuthStateChangedListener = callback => {
+export const onAuthStateChangedListener = callback =>
   onAuthStateChanged(auth, callback);
-};
