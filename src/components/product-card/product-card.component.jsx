@@ -14,7 +14,6 @@ import {
 
 const ProductCard = ({ product }) => {
   const { name, price, imageUrl } = product;
-
   const dispatch = useDispatch();
   const cartItems = useSelector(selectCartItems);
 
@@ -31,7 +30,7 @@ const ProductCard = ({ product }) => {
         buttonType={BUTTON_TYPE_CLASSES.inverted}
         onClick={addProductToCart}
       >
-        Add to cart
+        Add to card
       </Button>
     </ProductCartContainer>
   );
