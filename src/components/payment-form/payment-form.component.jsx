@@ -27,7 +27,7 @@ const PaymentForm = () => {
   const dispatch = useDispatch();
   const clearCart = () => dispatch(clearEntireCart(/*cartItems*/));
 
-  const paymentHandler = async e => {
+  const paymentHandler = async (e) => {
     e.preventDefault();
 
     if (!stripe || !elements) {
@@ -42,7 +42,7 @@ const PaymentForm = () => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ amount: amount * 100 }),
-    }).then(res => res.json());
+    }).then((res) => res.json());
 
     const {
       paymentIntent: { client_secret },
