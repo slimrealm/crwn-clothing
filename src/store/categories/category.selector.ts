@@ -1,7 +1,6 @@
 import { createSelector } from 'reselect';
 
 import { RootState } from '../store';
-
 import { CategoriesState } from './category.reducer';
 import { CategoryMap } from './category.types';
 

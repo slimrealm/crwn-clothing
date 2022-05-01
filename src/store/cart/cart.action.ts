@@ -3,7 +3,6 @@ import { CART_ACTION_TYPES, CartItem } from './cart.types';
 import {
   createAction,
   withMatcher,
-  Action,
   ActionWithPayload,
 } from '../../utils/reducer/reducer.utils';
 
@@ -95,10 +94,5 @@ export const clearItemFromCart = (
   cartItemToClear: CartItem
 ) => {
   const newCartItems = clearCartItem(cartItems, cartItemToClear);
-  return setCartItems(newCartItems);
-};
-
-export const clearEntireCart = () => {
-  const newCartItems: CartItem[] = [];
   return setCartItems(newCartItems);
 };

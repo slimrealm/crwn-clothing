@@ -1,4 +1,5 @@
 import { AnyAction } from 'redux';
+
 import { Category } from './category.types';
 
 import {
@@ -13,7 +14,7 @@ export type CategoriesState = {
   readonly error: Error | null;
 };
 
-export const CATEGORIES_INITIAL_STATE = {
+export const CATEGORIES_INITIAL_STATE: CategoriesState = {
   categories: [],
   isLoading: false,
   error: null,
