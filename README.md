@@ -2,7 +2,7 @@
 
 From course: https://www.udemy.com/course/complete-react-developer-zero-to-mastery/
 
-deployed to: TBD
+deploys to: https://sam-crwn.netlify.app/
 
 My enhancements:
 - create ClearEntireCart() functionality
