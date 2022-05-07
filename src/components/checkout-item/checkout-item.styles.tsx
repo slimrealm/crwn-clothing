@@ -38,5 +38,6 @@ export const Value = styled.span`
 
 export const RemoveButton = styled.div`
   padding-left: 12px;
+  font-weight: bold;
   cursor: pointer;
 `;
