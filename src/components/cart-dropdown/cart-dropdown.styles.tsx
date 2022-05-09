@@ -11,7 +11,7 @@ export const CartDropdownWindow = styled.div`
   width: 240px;
   height: 355px;
   top: 20px;
-  right: 40px;
+  right: 20px;
   z-index: 5;
   padding: 0 5px;
   border: 1px solid black;
@@ -39,6 +39,7 @@ export const CloseButtonHeader = styled.div`
 export const CloseButton = styled.div`
   font-size: 20px;
   font-weight: bold;
+  cursor: pointer;
 `;
 
 export const EmptyMessage = styled.span`
