@@ -11,10 +11,11 @@ import {
 import {
   CheckoutItemContainer,
   ImageContainer,
-  BaseSpan,
+  Description,
   Quantity,
   Arrow,
   Value,
+  Price,
   RemoveButton,
 } from './checkout-item.styles';
 
@@ -40,13 +41,13 @@ const CheckoutItem: FC<CheckoutItemProps> = memo(({ cartItem }) => {
       <ImageContainer>
         <img src={imageUrl} alt={`${name}`} />
       </ImageContainer>
-      <BaseSpan> {name} </BaseSpan>
+      <Description> {name} </Description>
       <Quantity>
         <Arrow onClick={removeItemHandler}>&#10094;</Arrow>
         <Value>{quantity}</Value>
         <Arrow onClick={addItemHandler}>&#10095;</Arrow>
       </Quantity>
-      <BaseSpan> {price}</BaseSpan>
+      <Price> {price}</Price>
       <RemoveButton onClick={clearItemHandler}>&#10005;</RemoveButton>
     </CheckoutItemContainer>
   );

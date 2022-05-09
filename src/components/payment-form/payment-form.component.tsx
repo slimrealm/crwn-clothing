@@ -11,6 +11,8 @@ import { BUTTON_TYPE_CLASSES } from '../button/button.component';
 import {
   PaymentFormContainer,
   FormContainer,
+  CardElementWrapper,
+  PaymentHeader,
   PaymentButton,
 } from './payment-form.styles';
 
@@ -73,8 +75,10 @@ const PaymentForm = () => {
   return (
     <PaymentFormContainer>
       <FormContainer onSubmit={paymentHandler}>
-        <h2>Credit Card Payment: </h2>
-        <CardElement />
+        <PaymentHeader>Credit Card Payment: </PaymentHeader>
+        <CardElementWrapper>
+          <CardElement />
+        </CardElementWrapper>
         <PaymentButton
           isLoading={isProcessingPayment}
           buttonType={BUTTON_TYPE_CLASSES.inverted}
