@@ -7,12 +7,7 @@ import { CategoryItem } from '../../store/categories/category.types';
 
 import Button, { BUTTON_TYPE_CLASSES } from '../button/button.component';
 
-import {
-  ProductCardContainer,
-  Footer,
-  Name,
-  Price,
-} from './product-card.styles';
+import { ProductCardContainer, Footer } from './product-card.styles';
 
 type ProductCardProps = {
   product: CategoryItem;
@@ -29,8 +24,8 @@ const ProductCard: FC<ProductCardProps> = ({ product }) => {
     <ProductCardContainer>
       <img src={imageUrl} alt={`${name}`} />
       <Footer>
-        <Name>{name}</Name>
-        <Price>{price}</Price>
+        <span>{name}</span>
+        <span>{price}</span>
       </Footer>
       <Button
         buttonType={BUTTON_TYPE_CLASSES.inverted}

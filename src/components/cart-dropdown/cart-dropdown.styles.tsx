@@ -6,24 +6,40 @@ import {
   InvertedButton,
 } from '../button/button.styles';
 
-export const CartDropdownContainer = styled.div`
+export const CartDropdownWindow = styled.div`
   position: absolute;
   width: 240px;
-  height: 340px;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
+  height: 355px;
+  top: 20px;
+  right: 20px;
+  z-index: 5;
+  padding: 0 5px;
   border: 1px solid black;
   background-color: white;
-  top: 90px;
-  right: 40px;
-  z-index: 5;
+`;
+
+export const CartDropdownContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px;
 
   ${BaseButton},
   ${GoogleSignInButton},
   ${InvertedButton} {
-    margin-top: auto;
+    margin-top: 15px;
   }
+`;
+
+export const CloseButtonHeader = styled.div`
+  display: flex;
+  justify-content: right;
+  padding-bottom: 5px;
+`;
+
+export const CloseButton = styled.div`
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
 `;
 
 export const EmptyMessage = styled.span`
@@ -35,5 +51,6 @@ export const CartItems = styled.div`
   height: 240px;
   display: flex;
   flex-direction: column;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 `;

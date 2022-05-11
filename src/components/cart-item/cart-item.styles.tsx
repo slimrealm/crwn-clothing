@@ -3,8 +3,9 @@ import styled from 'styled-components';
 export const CartItemContainer = styled.div`
   width: 100%;
   display: flex;
-  height: 80px;
-  margin-bottom: 15px;
+  height: 90px;
+  padding: 10px 0;
+  border-bottom: 1px solid darkgrey;
 
   img {
     width: 30%;

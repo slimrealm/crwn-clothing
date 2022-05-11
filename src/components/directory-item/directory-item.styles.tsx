@@ -21,7 +21,7 @@ export const Body = styled.div`
   justify-content: center;
   border: 1px solid black;
   background-color: white;
-  opacity: 0.7;
+  opacity: 0.75;
   position: absolute;
 
   h2 {
@@ -66,7 +66,7 @@ export const DirectoryItemContainer = styled.div`
     }
 
     ${Body} {
-      opacity: 0.9;
+      opacity: 0.95;
     }
   }
 

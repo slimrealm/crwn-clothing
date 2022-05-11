@@ -11,7 +11,9 @@ import PaymentForm from '../../components/payment-form/payment-form.component';
 import {
   CheckoutContainer,
   CheckoutHeader,
-  HeaderBlock,
+  LeftAlignedBlock,
+  CenterAlignedBlock,
+  RightAlignedBlock,
   Total,
 } from './checkout.styles';
 
@@ -22,21 +24,21 @@ const Checkout = () => {
   return (
     <CheckoutContainer>
       <CheckoutHeader>
-        <HeaderBlock>
+        <LeftAlignedBlock>
           <span>Product</span>
-        </HeaderBlock>
-        <HeaderBlock>
+        </LeftAlignedBlock>
+        <LeftAlignedBlock>
           <span>Description</span>
-        </HeaderBlock>
-        <HeaderBlock>
+        </LeftAlignedBlock>
+        <RightAlignedBlock>
           <span>Quantity</span>
-        </HeaderBlock>
-        <HeaderBlock>
+        </RightAlignedBlock>
+        <RightAlignedBlock>
           <span>Price</span>
-        </HeaderBlock>
-        <HeaderBlock>
+        </RightAlignedBlock>
+        <RightAlignedBlock>
           <span>Remove</span>
-        </HeaderBlock>
+        </RightAlignedBlock>
       </CheckoutHeader>
       {cartItems.map((cartItem) => (
         <CheckoutItem key={cartItem.id} cartItem={cartItem} />

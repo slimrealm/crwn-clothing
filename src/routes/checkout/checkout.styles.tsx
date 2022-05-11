@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const CheckoutContainer = styled.div`
-  width: 55%;
+  width: 90%;
   min-height: 90vh;
   display: flex;
   flex-direction: column;
@@ -15,15 +15,37 @@ export const CheckoutHeader = styled.div`
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid darkgrey;
+
+  div:nth-child(2) {
+    padding-left: 3%;
+  }
+
+  @media screen and (max-width: 370px) {
+    div:nth-child(2) {
+      display: none;
+    }
+  }
 `;
 
-export const HeaderBlock = styled.div`
+export const BaseHeaderBlock = styled.div`
   text-transform: capitalize;
-  width: 23%;
+  width: 20%;
 
-  &:last-child {
-    width: 8%;
+  @media screen and (max-width: 370px) {
+    width: 25%;
   }
+`;
+
+export const LeftAlignedBlock = styled(BaseHeaderBlock)`
+  text-align: left;
+`;
+
+export const CenterAlignedBlock = styled(BaseHeaderBlock)`
+  text-align: center;
+`;
+
+export const RightAlignedBlock = styled(BaseHeaderBlock)`
+  text-align: right;
 `;
 
 export const Total = styled.span`

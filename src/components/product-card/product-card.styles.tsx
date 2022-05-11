@@ -42,8 +42,6 @@ export const ProductCardContainer = styled.div`
   }
 
   @media screen and (max-width: 800px) {
-    width: 40vw;
-
     &:hover {
       img {
         opacity: unset;
@@ -62,13 +60,4 @@ export const Footer = styled.div`
   display: flex;
   justify-content: space-between;
   font-size: 18px;
-`;
-
-export const Name = styled.span`
-  width: 90%;
-  margin-bottom: 15px;
-`;
-
-export const Price = styled.span`
-  width: 10%;
 `;
