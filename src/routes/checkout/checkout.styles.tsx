@@ -23,8 +23,6 @@ export const CheckoutHeader = styled.div`
   @media screen and (max-width: 370px) {
     div:nth-child(2) {
       display: none;
-      //background-color: green;
-      //text-align: left;
     }
   }
 `;
@@ -36,9 +34,6 @@ export const BaseHeaderBlock = styled.div`
   @media screen and (max-width: 370px) {
     width: 25%;
   }
-  //&:last-child {
-  //width: 8%;
-  //}
 `;
 
 export const LeftAlignedBlock = styled(BaseHeaderBlock)`

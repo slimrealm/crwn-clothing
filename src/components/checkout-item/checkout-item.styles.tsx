@@ -8,12 +8,10 @@ export const CheckoutItemContainer = styled.div`
   padding: 15px 0;
   font-size: 20px;
   align-items: center;
-  //justify-content: center;
 
   @media screen and (max-width: 370px) {
     div:nth-child(2) {
       display: none;
-      //background-color: green;
     }
   }
 `;
@@ -28,7 +26,6 @@ export const BaseDiv = styled.div`
 `;
 
 export const ImageContainer = styled(BaseDiv)`
-  //padding-right: 15px;
   display: flex;
   align-items: center;
 
@@ -65,8 +62,6 @@ export const Price = styled(BaseDiv)`
 `;
 
 export const RemoveButton = styled(BaseDiv)`
-  //padding-left: 12px;
-  //justify-content: center;
   text-align: right;
   font-weight: bold;
   cursor: pointer;
