@@ -42,7 +42,7 @@ export const ProductCardContainer = styled.div`
   }
 
   @media screen and (max-width: 800px) {
-    width: 40vw;
+    //width: 40vw;
 
     &:hover {
       img {
@@ -60,15 +60,17 @@ export const Footer = styled.div`
   width: 100%;
   height: 5%;
   display: flex;
+  //padding: 0 10px;
   justify-content: space-between;
   font-size: 18px;
+  //border-left: 1px solid darkgrey;
 `;
 
 export const Name = styled.span`
-  width: 90%;
+  //width: 90%;
   margin-bottom: 15px;
 `;
 
 export const Price = styled.span`
-  width: 10%;
+  //width: 10%;
 `;

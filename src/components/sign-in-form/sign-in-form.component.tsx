@@ -1,4 +1,4 @@
-import { useState, FormEvent, ChangeEvent } from 'react';
+import { useState, FormEvent, ChangeEvent, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
 import FormInput from '../form-input/form-input.component';
@@ -44,6 +44,10 @@ const SignInForm = () => {
 
     setFormFields({ ...formFields, [name]: value });
   };
+
+  useEffect(() => {
+    resetFormFields();
+  }, []);
 
   return (
     <SignInContainer>

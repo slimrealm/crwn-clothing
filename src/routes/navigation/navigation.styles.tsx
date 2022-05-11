@@ -7,10 +7,14 @@ export const NavigationContainer = styled.div`
   display: flex;
   justify-content: space-between;
   //align-items: center;
-  padding: 0 5px 0 15px;
+  //padding: 0 5px 0 15px;
   margin-bottom: 25px;
   border-bottom: 1px solid darkgrey;
 
+  //position: sticky;
+  //top: 0px;
+  //z-index: 4;
+  //background-color: white;
   //@media screen and (max-width: 800px) {
   //height: 60px;
   //padding: 10px;
