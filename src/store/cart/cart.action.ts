@@ -63,6 +63,9 @@ export type SetCartItems = ActionWithPayload<
   CartItem[]
 >;
 
+const clearWholeCart = (cartItems: CartItem[]): CartItem[] =>
+  cartItems.filter((cartItem) => cartItem.id === 9999999); //need better way
+
 export const setIsCartOpen = withMatcher(
   (boolean: boolean): SetIsCartOpen =>
     createAction(CART_ACTION_TYPES.SET_IS_CART_OPEN, boolean)
@@ -79,6 +82,12 @@ export const addItemToCart = (
 ) => {
   const newCartItems = addCartItem(cartItems, productToAdd);
   return setCartItems(newCartItems);
+};
+
+export const clearEntireCart = (cartItems: CartItem[]) => {
+  const newCartItems = clearWholeCart(cartItems);
+  return setCartItems(newCartItems);
+  // return createAction(CART_ACTION_TYPES.SET_CART_ITEMS);
 };
 
 export const removeItemFromCart = (
