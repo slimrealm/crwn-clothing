@@ -15,15 +15,15 @@ export const BaseButton = styled.button`
   font-family: 'Open Sans', sans-serif;
   font-weight: bolder;
   border: none;
-  cursor: pointer;
+  cursor: ${(props) => (props.disabled ? '' : 'pointer')};
   display: flex;
   justify-content: center;
   align-items: center;
 
   &:hover {
-    background-color: white;
-    color: black;
-    border: 1px solid black;
+    background-color: ${(props) => (props.disabled ? 'black' : 'white')};
+    color: ${(props) => (props.disabled ? 'white' : 'black')};
+    border: ${(props) => (props.disabled ? '' : '1px solid black')};
   }
 `;
 
@@ -48,9 +48,9 @@ export const InvertedButton = styled(BaseButton)`
   border: 1px solid black;
 
   &:hover {
-    background-color: black;
-    color: white;
-    border: none;
+    background-color: ${(props) => (props.disabled ? 'white' : 'black')};
+    color: ${(props) => (props.disabled ? 'black' : 'white')};
+    border: ${(props) => (props.disabled ? '' : 'none')};
   }
 `;
 

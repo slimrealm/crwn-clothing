@@ -8,14 +8,16 @@ import {
 
 import CheckoutItem from '../../components/checkout-item/checkout-item.component';
 import PaymentForm from '../../components/payment-form/payment-form.component';
-import Button from '../../components/button/button.component';
+import Button, {
+  BUTTON_TYPE_CLASSES,
+} from '../../components/button/button.component';
 
 import {
   CheckoutContainer,
   CheckoutHeader,
   LeftAlignedBlock,
-  CenterAlignedBlock,
   RightAlignedBlock,
+  ClearCartAndTotalSection,
   Total,
 } from './checkout.styles';
 
@@ -48,10 +50,17 @@ const Checkout = () => {
       {cartItems.map((cartItem) => (
         <CheckoutItem key={cartItem.id} cartItem={cartItem} />
       ))}
-      <Button type="button" onClick={clearEntireCartHandler}>
-        ( BUTTON NEEDS BETTER STYLING / PLACEMENT!! ) Clear Entire Cart
-      </Button>
-      <Total>Total: ${cartTotal}</Total>
+      <ClearCartAndTotalSection>
+        <Button
+          type="button"
+          buttonType={BUTTON_TYPE_CLASSES.inverted}
+          onClick={clearEntireCartHandler}
+        >
+          Clear Entire Cart
+        </Button>
+        <Total>Total: ${cartTotal}</Total>
+      </ClearCartAndTotalSection>
+
       <PaymentForm />
     </CheckoutContainer>
   );

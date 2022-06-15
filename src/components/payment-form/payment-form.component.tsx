@@ -19,6 +19,7 @@ import {
   PaymentHeader,
   PaymentButton,
 } from './payment-form.styles';
+import { isDisabled } from '@testing-library/user-event/dist/utils';
 
 const ifValidCardElement = (
   card: StripeCardElement | null
@@ -90,9 +91,10 @@ const PaymentForm = () => {
         </CardElementWrapper>
         <PaymentButton
           isLoading={isProcessingPayment}
+          isDisabled={amount <= 0}
           buttonType={BUTTON_TYPE_CLASSES.inverted}
         >
-          Pay now
+          {amount > 0 ? 'Pay now' : 'Total is $0'}
         </PaymentButton>
       </FormContainer>
     </PaymentFormContainer>

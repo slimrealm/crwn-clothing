@@ -48,6 +48,13 @@ export const RightAlignedBlock = styled(BaseHeaderBlock)`
   text-align: right;
 `;
 
+export const ClearCartAndTotalSection = styled.div`
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+`;
+
 export const Total = styled.span`
   margin-top: 30px;
   margin-left: auto;
