@@ -7,7 +7,7 @@ import { Elements } from '@stripe/react-stripe-js';
 
 import App from './App';
 import { store, persistor } from './store/store';
-import * as serviceWorker from './serviceWorker';
+import * as serviceWorker from './serviceWorkerRegistration';
 import { stripePromise } from './utils/stripe/stripe.utils';
 
 const rootElement = document.getElementById('root');
