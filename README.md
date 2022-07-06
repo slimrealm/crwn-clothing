@@ -6,7 +6,7 @@ A clothing store made with `React`, where user can sign in / sign up using `Fire
 
 <br>
 
-This site is tutorial-based, and I enhanced the styling to make the site mobile-friendly and a more natural-feeling user experience in general.
+This site is tutorial-based, and I enhanced the styling to make the site mobile-friendly and a more natural-feeling user experience in general.  I also added "Clear Entire Cart" functionality.
 
 <br>
 
