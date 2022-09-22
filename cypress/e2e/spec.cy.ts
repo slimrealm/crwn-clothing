@@ -1,5 +1,5 @@
-import { mount } from '@cypress';
-import Navigation from '../../src/routes/navigation/navigation';
+import { mount } from '@cypress/react';
+import Navigation from '';
 
 describe('My First Test', () => {
   it('Does not do much!', () => {
