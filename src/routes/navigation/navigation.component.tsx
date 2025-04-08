@@ -9,12 +9,13 @@ import { selectIsCartOpen } from '../../store/cart/cart.selector';
 import { selectCurrentUser } from '../../store/user/user.selector';
 import { signOutStart } from '../../store/user/user.action';
 
-import { ReactComponent as CrwnLogo } from '../../assets/crown.svg';
+import CrwnLogo from '../../assets/crown.svg?react';
 
 import {
   NavigationContainer,
   NavLinks,
   NavLink,
+  NavSpan,
   LogoContainer,
 } from './navigation.styles';
 
@@ -35,9 +36,9 @@ const Navigation = () => {
           <NavLink to='/shop'>SHOP</NavLink>
 
           {currentUser ? (
-            <NavLink as='span' onClick={signOutUser}>
+            <NavSpan onClick={signOutUser}>
               SIGN OUT
-            </NavLink>
+            </NavSpan>
           ) : (
             <NavLink to='/auth'>SIGN IN</NavLink>
           )}
