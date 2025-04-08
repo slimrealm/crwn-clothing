@@ -27,3 +27,8 @@ export const NavLink = styled(Link)`
   width: clamp(10px, 60px, 60px);
   cursor: pointer;
 `;
+
+export const NavSpan = styled.span`
+  width: clamp(10px, 60px, 60px);
+  cursor: pointer;
+`;

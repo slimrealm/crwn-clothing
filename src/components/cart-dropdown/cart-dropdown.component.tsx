@@ -17,7 +17,6 @@ import {
   CloseButtonHeader,
   CloseButton,
 } from './cart-dropdown.styles';
-import React from 'react';
 
 const CartDropdown = () => {
   const dispatch = useDispatch();
